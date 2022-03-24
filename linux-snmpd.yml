@@ -1,4 +1,4 @@
-- hosts: 
+- hosts: ALL
   gather_facts: yes
   become: yes
  
@@ -16,7 +16,7 @@
     lineinfile:
       path: /etc/snmp/snmpd.conf
       regexp: 'com2sec notConfigUser  default       public'
-      line: 'com2sec notConfigUser  default       <COMMUNITY>'
+      line: 'com2sec notConfigUser  default       NEWTESTSTRING'
       backrefs: true
     become: true
 
