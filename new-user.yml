@@ -3,9 +3,7 @@
   hosts: all
   become: yes
   gather_facts: false
-  vars:
-    - user: user1
-    - password: $6$8IAGh7Gu2ugAB.sF$zHldDAEBMoiFUPq2RsGpQ.TRwbPOz3/S5ATs5TbfWDLypYjLGfKN8SNxu1Sx5nNfzQgDJqBh37jT9ln7EIHcq0
+ 
   tasks:
       - name: Create a login user
         user:
