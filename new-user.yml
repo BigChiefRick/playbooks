@@ -2,7 +2,7 @@
 - name: Create user on a linux server
   hosts: all
   become: yes
-  gather_facts: false
+  gather_facts: true
  
   tasks:
       - name: Create a login user
