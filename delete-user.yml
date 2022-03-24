@@ -1,7 +1,7 @@
 ---
 - hosts: all
   become: yes
-  gather facts:t true
+  gather_facts: true
   tasks:
     - name: Remove user
       user:
