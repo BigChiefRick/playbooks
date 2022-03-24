@@ -1,4 +1,4 @@
-- hosts: ALL
+- hosts: all
   gather_facts: yes
   become: yes
  
