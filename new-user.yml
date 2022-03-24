@@ -12,7 +12,7 @@
           name: "{{ user }}"
           password: "{{ password }}"
           groups:
-            - wheel
+            - sudo,admin
           state: present
 
       - name: Add public key to authorized_keys
