@@ -12,19 +12,17 @@
         - net-snmp-utils
         - net-snmp-devel
         - unzip
-    become: true
-
-  - name: Configure SNMP v2c Community
-    lineinfile:
+        
+    - name: Configure SNMP v2c Community
+      lineinfile:
       path: /etc/snmp/snmpd.conf
       regexp: 'com2sec notConfigUser  default       public'
       line: 'com2sec notConfigUser  default       NEWTESTSTRING'
       backrefs: true
-    become: true
-
-  - name: Start SNMP Service
-    service:
-      name: snmpd
+      
+    - name: Start SNMP Service
+      service:
+       name: snmpd
       state: started
       enabled: yes
-    become: true
+   
